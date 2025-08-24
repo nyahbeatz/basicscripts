@@ -2,9 +2,9 @@
 
 # A general-purpose bash script to install and set up common file server
 # and networking tools like NFS and Samba on a Linux system.
-# Installation of is Debian-based systems only.
+# Installation of Webmin is Debian-based systems only. For now still working on it
 # The script will detect the package manager (apt, yum, dnf) and install
-# the necessary server and client components.
+# the necessary server and client components. partial for now
 
 # Exit immediately if a command exits with a non-zero status.
 set -e
@@ -78,7 +78,7 @@ echo "Samba installation and service setup complete."
 echo "All specified file server tools have been installed successfully."
 echo "You can now proceed with configuring your shares in /etc/exports (for NFS) and /etc/samba/smb.conf (for Samba)."
 
-# --- Step 3: Install Samba packages ---
+# --- Step 3: Install Webmin repo ---
 curl -o webmin-setup-repo.sh https://raw.githubusercontent.com/webmin/webmin/master/webmin-setup-repo.sh
 sh webmin-setup-repo.sh
 
